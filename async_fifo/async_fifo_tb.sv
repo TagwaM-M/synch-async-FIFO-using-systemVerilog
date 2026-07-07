@@ -77,12 +77,6 @@ module fifo_tb;
     //read clk 
     initial rd_clk_i = 0;
     always #8.33 rd_clk_i = ~rd_clk_i;
-    // SCOREBOARD
-    // rdata_o is a REGISTERED output: a value read at edge T appears on
-    // rdata_o just after edge T, so it is sampled at edge T+1. We therefore
-    // pipeline the expected value by one cycle to line up with that latency.
-    //logic expected_valid;
-    //logic [WIDTH-1:0] expected_data;
     
     // main 
     initial begin 
